@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
+@theme {
+  /* Paleta de marca — extraída da logo W♡W */
+  --color-plum-950: #1b0c21;
+  --color-plum-900: #28132f;
+  --color-plum-800: #38193f;
+
+  --color-violet-500: #8467c9;
+  --color-violet-300: #b7a2e0;
+  --color-lilac-300: #c9a6e0;
+  --color-pink-500: #df7ea6;
+  --color-coral-500: #f0876a;
+  --color-coral-300: #f5ac94;
+
+  --color-cream-50: #fbf4ee;
+  --color-cream-100: #efe2dc;
+  --color-cream-300: #cbb9c2;
+
+  /* Tipografia — nomes ligados às variáveis do next/font */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+
+  /* Raio padrão dos componentes */
+  --radius-brand: 100px;
+}
+
+/* Linha/hairline não muda por tema (dark-only por enquanto) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --line: rgba(251, 244, 238, 0.14);
+  --gradient-brand: linear-gradient(
+    90deg,
+    #2c1633 0%,
+    #6e4fa0 28%,
+    #b98fda 48%,
+    #e17fb0 68%,
+    #f2876a 100%
+  );
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: var(--color-plum-950);
+    color: var(--color-cream-50);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-violet-500);
+    color: var(--color-cream-50);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-violet-300);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Texto com o gradiente da marca — usar no wordmark W♡W e títulos de destaque */
+  .text-gradient-brand {
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Fundo com o gradiente da marca — usar em CTAs principais */
+  .bg-gradient-brand {
+    background: var(--gradient-brand);
+  }
+
+  /* Hairline consistente em toda a landing (bordas, divisores) */
+  .border-line {
+    border-color: var(--line);
+  }
+
+  /* Fonte de destaque em itálico (taglines, citações) */
+  .font-voice {
+    font-family: var(--font-display);
+    font-style: italic;
+  }
 }
