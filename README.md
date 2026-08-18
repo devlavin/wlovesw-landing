@@ -1,4 +1,4 @@
-W♡W — Landing Page
+**W♡W — Landing Page**
 
 Landing page oficial do W♡W, um aplicativo de relacionamento criado para mulheres que amam mulheres.
 
