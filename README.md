@@ -13,11 +13,17 @@ O W♡W nasceu com a ideia de criar um espaço pensado especificamente para mulh
 A landing page funciona como a porta de entrada do projeto, apresentando:
 
 💗 Proposta do W♡W
+
 👩‍❤️‍👩 Como o aplicativo funciona
+
 ✨ Recursos
+
 🛡️ Segurança
+
 💬 Histórias e experiências
+
 📱 Prévia da experiência do aplicativo
+
 ❓ Perguntas frequentes
 
 🛠️ Tecnologias
@@ -35,12 +41,12 @@ plum · violet · lilac · pink · coral · cream
 
 A proposta visual busca transmitir uma experiência:
 
-acolhedora
-feminina
-moderna
-leve
-romântica
-segura
+- acolhedora
+- feminina
+- moderna
+- leve
+- romântica
+- segura
 
 🚧 Status
 
